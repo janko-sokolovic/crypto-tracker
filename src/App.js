@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Button from 'antd/lib/button';
 import CryptoList from './components/CryptoList';
-import { Layout, Menu, Breadcrumb } from 'antd';
-const { Header, Content, Footer } = Layout;
+import { Layout, Menu } from 'antd';
+const { Header, Content } = Layout;
 
 class App extends Component {
   render() {

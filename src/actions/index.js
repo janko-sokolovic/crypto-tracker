@@ -17,7 +17,8 @@ export function fetchCrypto(name) {
 
     return {
         type: ACTIONS.FETCH_CRYPTO,
-        payload: request
+        payload: request,
+        meta: name
     }
 
 }
