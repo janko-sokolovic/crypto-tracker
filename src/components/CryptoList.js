@@ -6,7 +6,7 @@ import { fetchCrypto } from '../actions/index';
 class CryptoList extends Component {
 
     componentDidMount() {
-        this.props.fetchCrypto("bitcoin");
+        this.props.fetchCrypto("BTC");
     }
 
     render() {
