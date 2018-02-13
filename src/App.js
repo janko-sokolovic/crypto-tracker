@@ -16,8 +16,8 @@ class App extends Component {
               mode="horizontal"
               defaultSelectedKeys={['2']}
               style={{ lineHeight: '64px' }}>
-              <Menu.Item key="1">Add crypto</Menu.Item>
               <Menu.Item key="2">Home</Menu.Item>
+              <Menu.Item key="1">Add crypto</Menu.Item>
             </Menu>
           </Header>
           <Content style={{ padding: '0 50px', margin: '20px 0' }}>

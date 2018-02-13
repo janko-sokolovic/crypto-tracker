@@ -1,4 +1,3 @@
-
 const BASE_URL = 'https://rest.coinapi.io/v1/ohlcv';
 const API_KEY = 'apiKey=F8F4A75C-6E67-4287-9C6E-040282572AFC';
 const PERIOD = '2HRS';

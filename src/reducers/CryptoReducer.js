@@ -9,7 +9,6 @@ export default function (state = {}, action) {
             const avgVals = _.map(action.payload.data, d => _.round((d.price_high + d.price_low) / 2));
             return { ...state, [action.meta]: avgVals };
         default:
-
     }
 
     return state;
