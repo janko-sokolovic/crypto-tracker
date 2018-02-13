@@ -10,10 +10,9 @@ export const ACTIONS = {
 //Action-creators 
 export function fetchCrypto(name) {
     const url = CoinApiUrlFactory.createSingleCryptoUrl(name);
+    const headers = { 'Accept': 'application/json' };
 
-    const request = axios.get(url, {
-        headers: { 'Accept': 'application/json' }
-    });
+    const request = axios.get(url, { headers });
 
     return {
         type: ACTIONS.FETCH_CRYPTO,
@@ -24,10 +23,9 @@ export function fetchCrypto(name) {
 
 export function fetchAllCryptos() {
     const url = CoinApiUrlFactory.createAllCryptosUrl();
+    const headers = { 'Accept': 'application/json' }
 
-    const request = axios.get(url, {
-        headers: { 'Accept': 'application/json' }
-    });
+    const request = axios.get(url, { headers });
 
     return {
         type: ACTIONS.FETCH_CRYPTO,
