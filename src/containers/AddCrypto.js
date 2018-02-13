@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { fetchAllCryptos } from '../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Input } from 'antd';
 
 class AddCrypto extends Component {
 
@@ -12,7 +13,8 @@ class AddCrypto extends Component {
     render() {
         return (
             <div>
-                ADD NEW CRYPTO
+                <Input placeholder="Search currency"
+                    style={{ maxWidth: '300px' }} />
             </div>
         );
     }
