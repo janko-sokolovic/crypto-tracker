@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Layout, Menu } from 'antd';
 import './App.css';
-import CryptoList from './components/CryptoList';
-import AddCrypto from './components/AddCrypto';
+import CryptoList from './containers/CryptoList';
+import AddCrypto from './containers/AddCrypto';
 
 import { Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
