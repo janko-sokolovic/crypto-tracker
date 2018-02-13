@@ -27,7 +27,7 @@ class App extends Component {
           </Header>
           <Content style={{ padding: '0 50px', margin: '20px 0' }}>
             <Route path="/" component={CryptoList}></Route>
-            <Route path="/add-crypto" component={AddCrypto}>Add crypto</Route>
+            <Route path="/add-crypto" component={AddCrypto}></Route>
           </Content>
         </Layout>
       </div>
