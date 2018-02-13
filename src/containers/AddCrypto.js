@@ -18,16 +18,8 @@ class AddCrypto extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        
-    }
-}
+const mapStateToProps = ({ allCryptos }) => ({ allCryptos });
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchAllCryptos }, dispatch);
-}
-
+const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchAllCryptos }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddCrypto);
-

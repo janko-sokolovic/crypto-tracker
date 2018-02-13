@@ -3,7 +3,7 @@ import {CryptoReducer, AllCryptosReducer} from './CryptoReducer';
 
 const rootReducer = combineReducers(
     {
-        cryptos: CryptoReducer,
+        crypto: CryptoReducer,
         allCryptos: AllCryptosReducer
     }
 );
