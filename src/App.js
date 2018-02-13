@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import { Layout, Menu } from 'antd';
 import './App.css';
 import CryptoList from './components/CryptoList';
-import { Layout, Menu } from 'antd';
-const { Header, Content } = Layout;
+import AddCrypto from './components/AddCrypto';
 
+import Route from 'react-router-dom/Route';
+import {Link} from 'react-router-dom';
+
+const { Header, Content } = Layout;
 class App extends Component {
   render() {
     return (
@@ -14,14 +18,16 @@ class App extends Component {
             <Menu
               theme="dark"
               mode="horizontal"
-              defaultSelectedKeys={['2']}
+              defaultSelectedKeys={['1']}
               style={{ lineHeight: '64px' }}>
-              <Menu.Item key="2">Home</Menu.Item>
-              <Menu.Item key="1">Add crypto</Menu.Item>
+              <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
+              <Menu.Item key="2"><Link to="/add-crypto">Add crypto</Link></Menu.Item>
             </Menu>
+
           </Header>
           <Content style={{ padding: '0 50px', margin: '20px 0' }}>
-            <CryptoList />
+            <Route path="/" component={CryptoList}></Route>
+            <Route path="/add-crypto" component={AddCrypto}>Add crypto</Route>
           </Content>
         </Layout>
       </div>
