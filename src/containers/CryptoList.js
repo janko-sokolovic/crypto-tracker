@@ -17,8 +17,7 @@ class CryptoList extends Component {
             <div style={{ width: '300px' }}>
                 <Sparklines data={this.props.crypto.BTC}
                     limit={12}
-                    width={150}
-                    height={50}
+                    width={150} height={50}
                     margin={5}
                     max={9000}
                     min={8000}
@@ -26,12 +25,12 @@ class CryptoList extends Component {
                     <SparklinesLine color="#aa55aa" />
                 </Sparklines>
             </div>
-        )
+        );
     }
 }
 
 const mapStateToProps = ({ crypto }) => ({ crypto })
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({fetchCrypto}, dispatch);
+const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchCrypto }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(CryptoList);
