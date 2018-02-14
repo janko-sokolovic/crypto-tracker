@@ -3,6 +3,7 @@ import { fetchAllCryptos } from '../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Input } from 'antd';
+import { Button } from 'antd';
 
 class AddCrypto extends Component {
 
@@ -15,6 +16,7 @@ class AddCrypto extends Component {
             <div>
                 <Input placeholder="Search currency"
                     style={{ maxWidth: '300px' }} />
+                    <Button type="primary" style={{margin:'0 15px'}}> Search </Button>
             </div>
         );
     }
