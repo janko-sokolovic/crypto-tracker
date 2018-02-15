@@ -18,7 +18,7 @@ export function AllCryptosReducer(state = [], action) {
 
     switch (action.type) {
         case ACTIONS.FETCH_ALL_CRYPTOS:
-            return [...state];
+            return _.union(state, action.payload.data);
         default:
     }
 

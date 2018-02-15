@@ -28,7 +28,7 @@ export function fetchAllCryptos() {
     const request = axios.get(url, { headers });
 
     return {
-        type: ACTIONS.FETCH_CRYPTO,
+        type: ACTIONS.FETCH_ALL_CRYPTOS,
         payload: request
     }
 }
