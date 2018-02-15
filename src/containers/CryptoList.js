@@ -10,7 +10,7 @@ class CryptoList extends Component {
         if (!this.props.cryptosData) return <div> No cryptos selected. </div>;
 
         const cryptos = _.map(this.props.cryptosData, (values, key) =>
-            <CryptoItem key={key} values={values} />
+            <CryptoItem key={key} values={values} code={key} />
         );
 
         return (
