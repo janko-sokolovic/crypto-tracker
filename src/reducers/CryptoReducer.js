@@ -1,7 +1,7 @@
 import { ACTIONS } from '../actions/index';
 import _ from 'lodash';
 
-export function CryptoReducer(state = null, action) {
+export function CryptosDataReducer(state = null, action) {
 
     switch (action.type) {
         case ACTIONS.FETCH_CRYPTO:

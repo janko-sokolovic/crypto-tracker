@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import {CryptoReducer, AllCryptosReducer} from './CryptoReducer';
+import {CryptosDataReducer, AllCryptosReducer} from './CryptoReducer';
 
 const rootReducer = combineReducers(
     {
-        crypto: CryptoReducer,
+        cryptosData: CryptosDataReducer,
         allCryptos: AllCryptosReducer
     }
 );
