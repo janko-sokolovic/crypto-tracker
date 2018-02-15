@@ -4,7 +4,6 @@ import _ from 'lodash';
 import getNextColor from './Colors';
 import { Card } from 'antd';
 
-
 export default class CryptoItem extends Component {
     render() {
 
@@ -19,7 +18,7 @@ export default class CryptoItem extends Component {
         return (
             <Card title={this.props.code}
                 bordered={false}
-                extra={'$' + current}
+                extra={<b>${current}</b>}
                 style={{ width: '25%', minWidth: '270px', margin: '5px', float: 'left' }}>
                 <Sparklines data={values}
                     limit={_.size(values)}
@@ -30,6 +29,7 @@ export default class CryptoItem extends Component {
                     <SparklinesLine color={getNextColor()} />
                     <SparklinesSpots />
                 </Sparklines>
+                <div style={{ textAlign: 'center', margin: '0 auto' }}> 24h </div>
             </Card>
         );
     }
