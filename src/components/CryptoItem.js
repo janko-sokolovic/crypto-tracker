@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Sparklines, SparklinesLine } from 'react-sparklines';
+import { Sparklines, SparklinesLine, SparklinesSpots } from 'react-sparklines';
 import _ from 'lodash';
+import getNextColor from './Colors';
 
 export default class CryptoItem extends Component {
     render() {
@@ -20,7 +21,8 @@ export default class CryptoItem extends Component {
                     max={max}
                     min={min}
                 >
-                    <SparklinesLine color="#aa55aa" />
+                    <SparklinesLine color={getNextColor()} />
+                    <SparklinesSpots />
                 </Sparklines>
             </div>
         );
