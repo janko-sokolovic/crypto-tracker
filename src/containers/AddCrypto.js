@@ -14,7 +14,8 @@ class AddCrypto extends Component {
         this.state = {
             recommendations: [],
             selected: '',
-            error: ''
+            error: '',
+            value: ''
         }
     }
 
@@ -29,6 +30,7 @@ class AddCrypto extends Component {
         if (doesExist) {
             const cryptoId = _(this.props.allCryptos).find(c => c.name === this.state.selected).asset_id;
             this.props.fetchCrypto(cryptoId);
+            this.setState({value: ''})
         } else {
             this.setState({ error: 'not-found' });
         }
@@ -38,7 +40,7 @@ class AddCrypto extends Component {
         const values = this.props.allCryptos.map(c => { return { value: c.name, text: c.name } });
         const matched = _.filter(values, c => c.value.toLowerCase().indexOf(value.toLowerCase()) !== -1)
 
-        this.setState({ recommendations: _.slice(matched, 0, 5), selected: value });
+        this.setState({ recommendations: _.slice(matched, 0, 5), selected: value, value:value });
     }
 
     render() {
@@ -54,6 +56,7 @@ class AddCrypto extends Component {
                     placeholder="Search currency"
                     style={{ maxWidth: '300px' }}
                     onChange={this.onChange.bind(this)}
+                    value={this.state.value}
                 />
                 <Button type="primary" style={{ margin: '0 15px' }}
                     onClick={this.addCrypto.bind(this)}> Add </Button>
